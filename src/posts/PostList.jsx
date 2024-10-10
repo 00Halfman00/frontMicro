@@ -7,9 +7,13 @@ const PostList = () => {
   const [posts, listPost] = useState({});
 
   useEffect(() => {
-    axios.get('http://localhost:4002/events').then(({data}) => {
-      listPost(data)
-    }).catch(e => console.error(e));
+    axios
+      .get('http://localhost:4002/events')
+      .then(({data}) => {
+        console.log("data: ", data)
+        listPost(data);
+      })
+      .catch((e) => console.error(e));
   }, []);
 
   const renderPosts = Object.values(posts).map((post) => {
