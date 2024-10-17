@@ -7,7 +7,7 @@ const PostCreateForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:4000/posts', { title, content }).then(({data}) => {
+    axios.post('http://posts.com/posts/create', { title, content }).then(({data}) => {
       setContent("");
       setTitle("");
     }).catch(e => console.error(e))

@@ -7,7 +7,7 @@ const CommentCreateForm = ({ postId }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:4001/posts/${postId}/comments`, { comment })
+      .post(`http://posts.com/posts/${postId}/comments`, { comment })
       .then((e) => setComment(''))
       .catch((e) => console.error(e));
   };

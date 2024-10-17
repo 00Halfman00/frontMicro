@@ -7,7 +7,7 @@ const App = () => {
     <div className="card container">
       <h1 className="title">Create Posts</h1>
       <PostCreateForm/>
-      <h1 className="title">List Posts</h1>
+      <h1 className="title">Posts</h1>
       <PostList/>
     </div>
   )

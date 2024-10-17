@@ -5,10 +5,10 @@ import CommentsList from '../comments/CommentsList';
 
 const PostList = () => {
   const [posts, listPost] = useState({});
-
+// a path in the ingress-srv must be laid out for /events for this axios call to work
   useEffect(() => {
     axios
-      .get('http://localhost:4002/events')
+      .get('http://posts.com/events')
       .then(({data}) => {
         console.log("data: ", data)
         listPost(data);
